@@ -17,8 +17,8 @@ public class NoticeServiceImpl implements NoticeService {
 
     @Override
     public List listNoticeGroup() throws Exception {
-        List NoticeList = null;
-        NoticeList = noticeDAO.selectAllNoticeList();
-        return NoticeList;
+        List noticeList = null;
+        noticeList = noticeDAO.selectAllNoticeList();
+        return noticeList;
     }
 }

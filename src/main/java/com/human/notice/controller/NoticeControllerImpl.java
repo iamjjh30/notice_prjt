@@ -22,12 +22,12 @@ public class NoticeControllerImpl implements NoticeController{
     private NoticeVO NoticeVO;
 
     @Override
-    @GetMapping("/code/notice_list.do")
+    @GetMapping("/notice_list.do")
     public ModelAndView listNoticeGroup(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
-        List codeGroupList = NoticeService.listNoticeGroup();
+        List noticeGroupList = NoticeService.listNoticeGroup();
         ModelAndView mav = new ModelAndView("/notice/listNoticeGroup");
-        mav.addObject("codeGroupList", codeGroupList);
+        mav.addObject("noticeGroupList", noticeGroupList);
         return mav;
     }
 }
